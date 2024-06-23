@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h3 {
+            margin: 10px;
+        }
+
+        form#payment input:not([type=radio]),
+        form#payment textarea {
+            background: white;
+            border: none;
+            border-radius: 3px;
+            font: italic 10px Georgia, "Times New Roman", Times, serif;
+            outline: none;
+            padding: 8px;
+            width: 200px;
+            box-shadow: 2px 2px 2px 2px ;
+        }
+
+        form#payment {
+            background: #9cbc2c;
+            border-radius: 5px;
+            padding: 30px;
+            width: 500px;
+            
+        }
+
+        form#payment fieldset {
+            border: 1px solid white;
+            margin-bottom: 3px;
+            border-radius: 10px;
+            padding:  5px;
+            
+            
+        }
+
+        form#payment fieldset:last-of-type {
+            margin-bottom: 0;
+        }
+
+        img {
+            width: 15px;
+            height: 13px;
+            border-radius: 4px;
+            border: thin solid;
+            box-shadow: 1px 1px 1px 1px;
+        }
+
+        label {
+            margin-right: 60px;
+            
+        }
+
+        button {
+            border: none;
+            width: 30%;
+            height: 40px;
+            border-radius: 20px;
+            font-size: large;
+            background-color: rgb(43, 39, 39);
+            color: white;
+            margin-left: 30%;
+            margin-top: 10px;
+            
+        }
+
+        button:hover{
+            background-color: rgb(24, 186, 132);
+        }
+    
+        
+    </style>
+</head>
+<body>
+<form id="payment">
+    <legend><h3>Step 1: Your details</h3></legend>
+    <fieldset>
+        
+        <p>
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="First and Last Name"/>
+        </p></fieldset>
+    <fieldset>    <p>
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="example@domain.com"/>
+        </p></fieldset>
+     <fieldset>   <p>
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" placeholder="Eg +4475000000000"/>
+        </p>  </fieldset>
+    
+        <legend><h3>Step 2: Delivery address</h3></legend>
+   
+        <fieldset>
+         <p>
+            <label for="address">Address</label>
+            <textarea id="address" rows="5" required></textarea>
+        </p></fieldset>
+
+     <fieldset>   <p>
+            <label for="postcode">Postcode</label>
+            <input type="text" id="postcode"/>
+        </p></fieldset>
+
+     <fieldset>   <p>
+            <label for="country">Country</label>
+            <input type="text" id="country"/>
+        </p></fieldset>
+    
+        <legend><h3>Step 3: Card details</h3></legend>
+    
+        
+        <fieldset>
+            <p>Card type</p>
+            <input type="radio" id="visa" name="payment" value="visa"/>
+            <label for="visa"><img src="visa.jpeg" alt="Visa Card">Visa</label>
+            <input type="radio" id="amex" name="payment" value="amex"/>
+            <label for="amex"><img src="amex.jpeg" alt="American Express Card">AmEx</label>
+            <input type="radio" id="mastercard" name="payment" value="mastercard"/>
+            <label for="mastercard"><img src="mcard.jpeg" alt="Mastercard">Mastercard</label>
+             </fieldset>
+       
+       <fieldset>
+        <p>
+            <label for="cardNumber">Card Number</label>
+            <input type="text" id="cardNumber" required/>
+        </p></fieldset>
+      
+      <fieldset>
+        <p>
+            <label for="securityCode">Security Code</label>
+            <input type="password" id="securityCode" required/>
+        </p></fieldset>
+       
+       <fieldset>
+            <p>
+            <label for="cardName">Name on Card</label>
+            <input type="text" id="cardName" placeholder="Exact name as on the card" required/>
+        </p> </fieldset>
+    
+        <button type="submit">BUY IT!</button>
+    
+</form>
+</body>
+</html>
